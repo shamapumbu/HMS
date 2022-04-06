@@ -1,7 +1,7 @@
 import java.util.*;
 
 class SilverPlan extends HealthInsurancePlan {
-    public SilverPlan(double cov) {
-        super.setCoverage(cov);
+    public SilverPlan() {
+        super.setCoverage(0.7);
     }
 }
