@@ -3,7 +3,7 @@ import java.util.*;
 class Patient extends User {
     private long patientID, staffID;
     private boolean insured;
-    private int yearsOfExperience;
+    private int yearsOfExperience; //ask Mr Phiri if years of experience for a patient is necessary
     private String description;
     private double salary;
     private HealthInsurancePlan insurancePlan;
@@ -63,16 +63,16 @@ class Patient extends User {
         this.insurancePlan = insurancePlan;
     }
 
-
     public static void main(String[] args) {
-        HealthInsurancePlan plan1 = new PlatinumPlan(0.9);
-        HealthInsurancePlan plan2 = new GoldPlan(0.8);
-        HealthInsurancePlan plan3 = new SilverPlan(0.7);
-        HealthInsurancePlan plan4 = new BronzePlan(0.6);
+        HealthInsurancePlan plan1 = new PlatinumPlan();
+        HealthInsurancePlan plan2 = new GoldPlan();
+        HealthInsurancePlan plan3 = new SilverPlan();
+        HealthInsurancePlan plan4 = new BronzePlan();
 
-        System.out.println("Platinum Plan is " + plan1);
-        System.out.println("Gold Plan is " + plan2);
-        System.out.println("Silver Plan is " + plan3);
-        System.out.println("Bronze Plan is " + plan4);
+        System.out.println("Platinum plan is " + plan1.getCoverage());
+        System.out.println("Gold plan is " + plan2.getCoverage());
+        System.out.println("Silver plan is " + plan3.getCoverage());
+        System.out.println("Bronze plan is " + plan4.getCoverage());
     }
+    
 }
